@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+.cache/
+.pytest_cache/
+
+assets/
+templates/
+
+reports/
+allure-report/
+
+logs/
+logs
+
+.DS_Store
+*.swp
+*.log

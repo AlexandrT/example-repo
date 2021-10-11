@@ -1,0 +1,37 @@
+ru:
+  signin:
+    error: Проверьте логин и правильность пароля
+
+  client:
+    show:
+      contractor_name: Наименование
+      represent:
+        status:
+          no_access: Нет доступа
+    search_contractor:
+      not_found: Не нашел контрагента
+    new:
+      title: Клиент
+
+  contractors:
+    create:
+      country: Россия
+
+  contracts:
+    new:
+      name_placeholder: Название договора
+    list:
+      types:
+        contract:
+          name: Контракт
+          roles:
+            - Дебитор
+            - Кредитор
+        gdfo:
+          name: Договор
+          roles:
+            - Клиент
+            - Дебитор
+            - Фактор
+      status:
+        current: Действующий

@@ -1,0 +1,12 @@
+pytest
+pytest-selenium
+allure-pytest
+python-dateutil
+pytest-base-url
+pytest-ordering
+pytest-rerunfailures
+pytest-repeat
+
+faker
+
+python-i18n[YAML]
