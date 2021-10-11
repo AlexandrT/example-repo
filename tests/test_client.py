@@ -17,7 +17,7 @@ from faker import Faker
 @allure.feature("Clients")
 class TestClient(BaseTest):
     def setup_method(self):
-        fake = Faker('ru_RU')
+        fake = self.fake
 
         name = fake.company()
         self.contractor = Contractor(

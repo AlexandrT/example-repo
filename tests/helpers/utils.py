@@ -3,6 +3,8 @@ import re
 import i18n
 import datetime
 
+from faker import Faker
+
 from dateutil.relativedelta import *
 
 
@@ -19,6 +21,7 @@ class CustomTranslator:
 class BaseTest(object):
     def setup_class(cls):
         cls.translator = CustomTranslator()
+        cls.fake = Faker('ru_RU')
 
     def setup_method(self, method):
         print('\n==================TEST STARTED==================')

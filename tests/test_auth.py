@@ -12,7 +12,7 @@ from lib.config import settings
 @allure.feature("Authorization")
 class TestAuth(BaseTest):
     def setup_method(self):
-        fake = Faker('ru_RU')
+        fake = self.fake
 
         self.wrong_password = fake.text()
 

@@ -14,8 +14,7 @@ from faker import Faker
 @allure.feature("Contracts")
 class TestContract(BaseTest):
     def setup_method(self):
-
-        fake = Faker('ru_RU')
+        fake = self.fake
         number = randrange(10000)
         self.contract = Contract(
             number = number,

@@ -12,7 +12,7 @@ from faker import Faker
 @allure.feature("Contractors legal")
 class TestContractorsLegal(BaseTest):
     def setup_method(self):
-        fake = Faker('ru_RU')
+        fake = self.fake
 
         name = fake.company()
         self.contractor = Contractor(
