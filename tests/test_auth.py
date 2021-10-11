@@ -1,4 +1,3 @@
-import time
 import pytest
 import allure
 
@@ -17,7 +16,6 @@ class TestAuth(BaseTest):
         self.wrong_password = fake.text()
 
     @allure.title("with incorrect credentials")
-    @pytest.mark.nondestructive
     def test_bad_credentials(self, selenium, base_url):
         selenium.get(base_url)
 
@@ -30,7 +28,6 @@ class TestAuth(BaseTest):
         assert signin_page.error_message == self.translator.get_translator('co.signin.error')
 
     @allure.title("with empty credentials")
-    @pytest.mark.nondestructive
     def test_empty_credentials(self, selenium, base_url):
         selenium.get(base_url)
 

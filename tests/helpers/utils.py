@@ -2,6 +2,7 @@ import os
 import re
 import i18n
 import datetime
+import pytest
 
 from faker import Faker
 
@@ -18,6 +19,7 @@ class CustomTranslator:
 
         return result
 
+@pytest.mark.nondestructive
 class BaseTest(object):
     def setup_class(cls):
         cls.translator = CustomTranslator()

@@ -1,4 +1,3 @@
-import time
 import allure
 import pytest
 
@@ -52,7 +51,6 @@ class TestClient(BaseTest):
         )
 
     @allure.title("create with existed contractor")
-    @pytest.mark.nondestructive
     def test_create_client(self, selenium, base_url):
         authorize(selenium, base_url)
 
@@ -126,7 +124,6 @@ class TestClient(BaseTest):
             represent_card.click_more_button()
             represent_card.click_remove_button()
 
-            time.sleep(2)
             assert len(client_show_page.get_represent_items()) == 1
 
         with allure.step("rename client"):
@@ -142,6 +139,5 @@ class TestClient(BaseTest):
             client_show_page.click_rename_btn()
             client_show_page.new_name = self.new_client.name
             client_show_page.click_save_btn()
-            time.sleep(1)
 
             assert self.new_client.name == client_show_page.name

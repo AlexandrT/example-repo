@@ -25,7 +25,6 @@ class TestContract(BaseTest):
         )
 
     @allure.title("create contract")
-    @pytest.mark.nondestructive
     def test_create_contract(self, selenium, base_url):
         authorize(selenium, base_url)
         selenium.get(base_url)
@@ -91,8 +90,7 @@ class TestContract(BaseTest):
             contracts_list_page = ContractsListPage(selenium)
             contracts_list_page.select_type(self.translator.get_translator('co.contracts.list.types.contract.name'))
             contracts_list_page.search = str(self.contract.number)
-            time.sleep(1)
-
+            
             contract_item = contracts_list_page.get_contract_item_by_index(0)
 
             contract_card = ContractCard(selenium, contract_item)
@@ -104,7 +102,6 @@ class TestContract(BaseTest):
             assert get_int(contract_card.members_count) == len(roles)
 
     @allure.title("create GDFO")
-    @pytest.mark.nondestructive
     def test_create_gdfo(self, selenium, base_url):
         authorize(selenium, base_url)
 
@@ -165,7 +162,6 @@ class TestContract(BaseTest):
         with allure.step("Contracts list"):
             contracts_list_page = ContractsListPage(selenium)
             contracts_list_page.search = str(self.contract.number)
-            time.sleep(1)
 
             contract_item = contracts_list_page.get_contract_item_by_index(0)
 

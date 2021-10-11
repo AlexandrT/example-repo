@@ -1,27 +1,33 @@
+from dataclasses import dataclass
+
+
+@dataclass
 class Client:
-    def __init__(self, name):
-        self.name = name
+    name: str
 
+
+@dataclass
 class Contractor:
-    def __init__(self, full_name, name, inn, date_from, country):
-        self.full_name = full_name
-        self.name = name
-        self.inn = inn
-        self.date_from = date_from
-        self.country = country
+    full_name: str
+    name: str
+    inn: str
+    date_from: str
+    country: str
 
+
+@dataclass
 class Representer:
-    def __init__(self, first_name, last_name, middle_name, ssn, country):
-        self.first_name = first_name
-        self.last_name = last_name
-        self.middle_name = middle_name
-        self.ssn = ssn
-        self.country = country
+    first_name: str
+    last_name: str
+    middle_name: str
+    ssn: str
+    country: str
 
+
+@dataclass
 class Contract:
-    def __init__(self, number, name, sign_date, start_date, end_date):
-        self.number = number
-        self.name = name
-        self.sign_date = sign_date
-        self.start_date = start_date
-        self.end_date = end_date
+    number: int
+    name: str
+    sign_date: str
+    start_date: str
+    end_date: str

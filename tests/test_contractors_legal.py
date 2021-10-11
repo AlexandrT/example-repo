@@ -1,4 +1,3 @@
-import time
 import pytest
 
 from helpers.contractors_legal.add_page import *
@@ -24,7 +23,6 @@ class TestContractorsLegal(BaseTest):
         )
 
     @allure.title("create")
-    @pytest.mark.nondestructive
     @pytest.mark.run(order=1)
     @pytest.mark.repeat(3)
     def test_create_contractor_legal(self, selenium, base_url):
